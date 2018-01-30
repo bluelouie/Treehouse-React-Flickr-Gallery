@@ -13,34 +13,18 @@ export default class Nav extends Component {
   //
   //This function pulls the input from the search input and calls the stateSet
   handleValueSearch(input) {
-    const text = input;
-    this.props.changeSearchText(text);
+    this.props.changeSearchText(input);
   }
 
-  //These just use hard coded strings to fill out the query
-  handleValueCats() {
-    const text = 'Cats';
-    this.props.changeSearchText(text);
-  }
-
-  handleValueDogs() {
-    const text = 'dogs';
-    this.props.changeSearchText(text);
-  }
-
-  handleValueComp() {
-    const text = 'computers';
-    this.props.changeSearchText(text);
-  }
 
   render() {
     return (
       <nav className="main-nav">
         <ul>
-          <li><NavLink to={`/cats`} onClick={this.handleValueCats.bind(this)}>Cats</NavLink></li>
-          <li><NavLink to={`/dogs`} onClick={this.handleValueDogs.bind(this)}>Dogs</NavLink></li>
-          <li><NavLink to={`/computers`} onClick={this.handleValueComp.bind(this)}>Computers</NavLink></li>
-          <li><NavLink to={`/search`} onClick={this.handleValueSearch.bind(this)}>Search</NavLink></li>
+          <li><NavLink to={`/cats`} >Cats</NavLink></li>
+          <li><NavLink to={`/dogs`} >Dogs</NavLink></li>
+          <li><NavLink to={`/computers`} >Computers</NavLink></li>
+          <li><NavLink to={`/search`} >Search</NavLink></li>
           <Route  path='/search' render={ () => <SearchBar handleValueSearch={this.handleValueSearch.bind(this)} />}/>
         </ul>
       </nav>
