@@ -31,7 +31,6 @@ class App extends Component {
 
     changeValue (text) {
       this.setState({query : text});
-      console.log(this.state.query);
     }
 
     render() {

@@ -36,12 +36,10 @@ export default class Container extends Component {
   performSearch (query) {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=20&format=json&nojsoncallback=1`)
     .then( response => {
-      console.log(this.props.value);
       this.setState(
         {
           images: response.data.photos.photo,
         });
-        console.log(this.props.value);
       })
       .catch(error => {
         alert('Error 404');
