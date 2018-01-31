@@ -26,10 +26,10 @@ export default class Container extends Component {
     this.performSearch(this.props.value);
   }
 
-
+  // Passes the search text back up, then calls the search for the API
   changeSearchText(text) {
     this.props.changeValue(text);
-    this.performSearch(this.props.value.query);
+    this.performSearch(text);
   }
 
   //Api fetcher that useses state thats passed in after being changed from changeSearchText to fillout the link

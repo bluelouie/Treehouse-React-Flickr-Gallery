@@ -9,9 +9,7 @@ import {
 
 export default class Nav extends Component {
 
-  //Im alittle ashamed of this code. ALOT of repetition! I would love to revisit this alittle later but its quite late :)
-  //
-  //This function pulls the input from the search input and calls the stateSet
+  //This function pulls the input from the search input and calls changeSearchText method
   handleValueSearch(input) {
     this.props.changeSearchText(input);
   }

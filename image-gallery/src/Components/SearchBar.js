@@ -9,7 +9,6 @@ export default class SearchBar extends Component {
     if (input === "") {
       input = 'pretty';
     }
-    console.log(input);
     this.props.handleValueSearch(input);
 
   }
